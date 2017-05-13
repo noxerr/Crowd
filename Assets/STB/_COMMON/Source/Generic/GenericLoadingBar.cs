@@ -1,0 +1,52 @@
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace STB.Generic
+{
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// <summary>
+    /// Class: GenericLoadingBar
+    /// # 
+    /// </summary>
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    public class GenericLoadingBar : MonoBehaviour
+    {
+        // public
+        public Texture2D emptyProgressBar; // Set this in inspector.
+        public Texture2D fullProgressBar; // Set this in inspector.
+
+        // private
+        private AsyncOperation async = null; // When assigned, load is in progress.
+
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// LoadALevel
+        /// </summary>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+        private IEnumerator LoadALevel(string levelName)
+        {
+#if UNITY_5_3_OR_NEWER
+            async = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(levelName);
+#else
+            async = Application.LoadLevelAsync(levelName);
+#endif
+
+            yield return async;
+        }
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// OnGUI
+        /// </summary>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+        void OnGUI()
+        {
+            if (async != null)
+            {
+                GUI.DrawTexture(new Rect(0, 0, 100, 50), emptyProgressBar);
+                GUI.DrawTexture(new Rect(0, 0, 100 * async.progress, 50), fullProgressBar);
+            }
+        }
+    }
+}
