@@ -1,0 +1,678 @@
+fileFormatVersion: 2
+guid: e27dea83909ebee449d8534273a10949
+timeCreated: 1485033275
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Archmodels55_35_balustrade1
+    100002: Archmodels55_35_basketball_board
+    100004: Archmodels55_35_basketball_court
+    100006: Archmodels55_35_blue
+    100008: Archmodels55_35_blue2
+    100010: Archmodels55_35_board1
+    100012: Archmodels55_35_board2
+    100014: Archmodels55_35_board3
+    100016: Archmodels55_35_chairs
+    100018: Archmodels55_35_climbing_wall
+    100020: Archmodels55_35_dkw
+    100022: Archmodels55_35_engines
+    100024: Archmodels55_35_glass
+    100026: Archmodels55_35_hull1
+    100028: Archmodels55_35_hull1_MeshPart0
+    100030: Archmodels55_35_hull1_MeshPart1
+    100032: Archmodels55_35_hull1_MeshPart2
+    100034: Archmodels55_35_hull1_MeshPart3
+    100036: Archmodels55_35_hull1_MeshPart4
+    100038: Archmodels55_35_hull1_MeshPart5
+    100040: Archmodels55_35_hull1_MeshPart6
+    100042: Archmodels55_35_hull1_MeshPart7
+    100044: Archmodels55_35_hull1_MeshPart8
+    100046: Archmodels55_35_hull1_MeshPart9
+    100048: Archmodels55_35_hull2
+    100050: Archmodels55_35_landing_green
+    100052: Archmodels55_35_landing_logo
+    100054: Archmodels55_35_loungers
+    100056: Archmodels55_35_loungers_MeshPart0
+    100058: Archmodels55_35_loungers_MeshPart1
+    100060: Archmodels55_35_loungers_MeshPart10
+    100062: Archmodels55_35_loungers_MeshPart11
+    100064: Archmodels55_35_loungers_MeshPart12
+    100066: Archmodels55_35_loungers_MeshPart13
+    100068: Archmodels55_35_loungers_MeshPart14
+    100070: Archmodels55_35_loungers_MeshPart2
+    100072: Archmodels55_35_loungers_MeshPart3
+    100074: Archmodels55_35_loungers_MeshPart4
+    100076: Archmodels55_35_loungers_MeshPart5
+    100078: Archmodels55_35_loungers_MeshPart6
+    100080: Archmodels55_35_loungers_MeshPart7
+    100082: Archmodels55_35_loungers_MeshPart8
+    100084: Archmodels55_35_loungers_MeshPart9
+    100086: Archmodels55_35_minigolf
+    100088: Archmodels55_35_pipes
+    100090: Archmodels55_35_pool_bar
+    100092: Archmodels55_35_pool_water
+    100094: Archmodels55_35_rb1
+    100096: Archmodels55_35_rb1_MeshPart0
+    100098: Archmodels55_35_rb1_MeshPart1
+    100100: Archmodels55_35_rb1_MeshPart2
+    100102: Archmodels55_35_rb2
+    100104: Archmodels55_35_rb5
+    100106: Archmodels55_35_rb_lifts
+    100108: Archmodels55_35_rb_lifts_MeshPart0
+    100110: Archmodels55_35_rb_lifts_MeshPart1
+    100112: Archmodels55_35_rb_lifts_MeshPart2
+    100114: Archmodels55_35_rb_lines
+    100116: Archmodels55_35_rb_lines_MeshPart0
+    100118: Archmodels55_35_rb_lines_MeshPart1
+    100120: Archmodels55_35_rb_lines_MeshPart2
+    100122: Archmodels55_35_tables
+    100124: Archmodels55_35_windows
+    100126: //RootNode
+    100128: 0001
+    100130: Archmodels55_35_hull1_MeshPart10
+    100132: Archmodels55_35_hull1_MeshPart11
+    100134: Camera
+    100136: Lamp
+    100138: balustrade1
+    100140: basketball_board
+    100142: basketball_court
+    100144: blue
+    100146: blue2
+    100148: board1
+    100150: board2
+    100152: board3
+    100154: chairs
+    100156: dkw
+    100158: DoorJamRoom
+    100160: FloorPieceNoHole
+    100162: FloorPieceWithHole
+    100164: FloorPrefab
+    100166: Floors
+    100168: glass
+    100170: hull1
+    100172: hull1 West
+    100174: hull1 West_MeshPart0
+    100176: hull1 West_MeshPart1
+    100178: hull1 West_MeshPart2
+    100180: hull1_MeshPart0
+    100182: hull1_MeshPart1
+    100184: hull1_MeshPart2
+    100186: hull1_MeshPart3
+    100188: hull2
+    100190: landing_green
+    100192: landing_logo
+    100194: loungers
+    100196: loungers_MeshPart0
+    100198: loungers_MeshPart1
+    100200: loungers_MeshPart2
+    100202: loungers_MeshPart3
+    100204: loungers_MeshPart4
+    100206: minigolf
+    100208: pipes
+    100210: pool_bar
+    100212: pool_water
+    100214: Rooms
+    100216: StartRoom
+    100218: tables
+    100220: windows
+    100222: windowsRoom
+    100224: hull1 EastFloor0
+    100226: hull1 EastFloor1
+    100228: hull1 EastFloor2Middle
+    100230: hull1 EastFloor3
+    100232: hull1 EastFloor4Top
+    100234: hull1 EastFloor4Top_MeshPart0
+    100236: hull1 EastFloor4Top_MeshPart1
+    100238: hull1 EastWalls
+    100240: hull1 WestFloor0
+    100242: hull1 WestFloor1
+    100244: hull1 WestFloor2Midle
+    100246: hull1 WestFloor3
+    100248: hull1 WestFloor4Top
+    100250: hull1 WestFloor4Top_MeshPart0
+    100252: hull1 WestFloor4Top_MeshPart1
+    100254: hull1 WestWalls
+    100256: DoorJamRoom.001
+    100258: windowsRoom.001
+    400000: Archmodels55_35_balustrade1
+    400002: Archmodels55_35_basketball_board
+    400004: Archmodels55_35_basketball_court
+    400006: Archmodels55_35_blue
+    400008: Archmodels55_35_blue2
+    400010: Archmodels55_35_board1
+    400012: Archmodels55_35_board2
+    400014: Archmodels55_35_board3
+    400016: Archmodels55_35_chairs
+    400018: Archmodels55_35_climbing_wall
+    400020: Archmodels55_35_dkw
+    400022: Archmodels55_35_engines
+    400024: Archmodels55_35_glass
+    400026: Archmodels55_35_hull1
+    400028: Archmodels55_35_hull1_MeshPart0
+    400030: Archmodels55_35_hull1_MeshPart1
+    400032: Archmodels55_35_hull1_MeshPart2
+    400034: Archmodels55_35_hull1_MeshPart3
+    400036: Archmodels55_35_hull1_MeshPart4
+    400038: Archmodels55_35_hull1_MeshPart5
+    400040: Archmodels55_35_hull1_MeshPart6
+    400042: Archmodels55_35_hull1_MeshPart7
+    400044: Archmodels55_35_hull1_MeshPart8
+    400046: Archmodels55_35_hull1_MeshPart9
+    400048: Archmodels55_35_hull2
+    400050: Archmodels55_35_landing_green
+    400052: Archmodels55_35_landing_logo
+    400054: Archmodels55_35_loungers
+    400056: Archmodels55_35_loungers_MeshPart0
+    400058: Archmodels55_35_loungers_MeshPart1
+    400060: Archmodels55_35_loungers_MeshPart10
+    400062: Archmodels55_35_loungers_MeshPart11
+    400064: Archmodels55_35_loungers_MeshPart12
+    400066: Archmodels55_35_loungers_MeshPart13
+    400068: Archmodels55_35_loungers_MeshPart14
+    400070: Archmodels55_35_loungers_MeshPart2
+    400072: Archmodels55_35_loungers_MeshPart3
+    400074: Archmodels55_35_loungers_MeshPart4
+    400076: Archmodels55_35_loungers_MeshPart5
+    400078: Archmodels55_35_loungers_MeshPart6
+    400080: Archmodels55_35_loungers_MeshPart7
+    400082: Archmodels55_35_loungers_MeshPart8
+    400084: Archmodels55_35_loungers_MeshPart9
+    400086: Archmodels55_35_minigolf
+    400088: Archmodels55_35_pipes
+    400090: Archmodels55_35_pool_bar
+    400092: Archmodels55_35_pool_water
+    400094: Archmodels55_35_rb1
+    400096: Archmodels55_35_rb1_MeshPart0
+    400098: Archmodels55_35_rb1_MeshPart1
+    400100: Archmodels55_35_rb1_MeshPart2
+    400102: Archmodels55_35_rb2
+    400104: Archmodels55_35_rb5
+    400106: Archmodels55_35_rb_lifts
+    400108: Archmodels55_35_rb_lifts_MeshPart0
+    400110: Archmodels55_35_rb_lifts_MeshPart1
+    400112: Archmodels55_35_rb_lifts_MeshPart2
+    400114: Archmodels55_35_rb_lines
+    400116: Archmodels55_35_rb_lines_MeshPart0
+    400118: Archmodels55_35_rb_lines_MeshPart1
+    400120: Archmodels55_35_rb_lines_MeshPart2
+    400122: Archmodels55_35_tables
+    400124: Archmodels55_35_windows
+    400126: //RootNode
+    400128: 0001
+    400130: Archmodels55_35_hull1_MeshPart10
+    400132: Archmodels55_35_hull1_MeshPart11
+    400134: Camera
+    400136: Lamp
+    400138: balustrade1
+    400140: basketball_board
+    400142: basketball_court
+    400144: blue
+    400146: blue2
+    400148: board1
+    400150: board2
+    400152: board3
+    400154: chairs
+    400156: dkw
+    400158: DoorJamRoom
+    400160: FloorPieceNoHole
+    400162: FloorPieceWithHole
+    400164: FloorPrefab
+    400166: Floors
+    400168: glass
+    400170: hull1
+    400172: hull1 West
+    400174: hull1 West_MeshPart0
+    400176: hull1 West_MeshPart1
+    400178: hull1 West_MeshPart2
+    400180: hull1_MeshPart0
+    400182: hull1_MeshPart1
+    400184: hull1_MeshPart2
+    400186: hull1_MeshPart3
+    400188: hull2
+    400190: landing_green
+    400192: landing_logo
+    400194: loungers
+    400196: loungers_MeshPart0
+    400198: loungers_MeshPart1
+    400200: loungers_MeshPart2
+    400202: loungers_MeshPart3
+    400204: loungers_MeshPart4
+    400206: minigolf
+    400208: pipes
+    400210: pool_bar
+    400212: pool_water
+    400214: Rooms
+    400216: StartRoom
+    400218: tables
+    400220: windows
+    400222: windowsRoom
+    400224: hull1 EastFloor0
+    400226: hull1 EastFloor1
+    400228: hull1 EastFloor2Middle
+    400230: hull1 EastFloor3
+    400232: hull1 EastFloor4Top
+    400234: hull1 EastFloor4Top_MeshPart0
+    400236: hull1 EastFloor4Top_MeshPart1
+    400238: hull1 EastWalls
+    400240: hull1 WestFloor0
+    400242: hull1 WestFloor1
+    400244: hull1 WestFloor2Midle
+    400246: hull1 WestFloor3
+    400248: hull1 WestFloor4Top
+    400250: hull1 WestFloor4Top_MeshPart0
+    400252: hull1 WestFloor4Top_MeshPart1
+    400254: hull1 WestWalls
+    400256: DoorJamRoom.001
+    400258: windowsRoom.001
+    2300000: Archmodels55_35_balustrade1
+    2300002: Archmodels55_35_basketball_board
+    2300004: Archmodels55_35_basketball_court
+    2300006: Archmodels55_35_blue
+    2300008: Archmodels55_35_blue2
+    2300010: Archmodels55_35_board1
+    2300012: Archmodels55_35_board2
+    2300014: Archmodels55_35_board3
+    2300016: Archmodels55_35_chairs
+    2300018: Archmodels55_35_climbing_wall
+    2300020: Archmodels55_35_dkw
+    2300022: Archmodels55_35_engines
+    2300024: Archmodels55_35_glass
+    2300026: Archmodels55_35_hull1_MeshPart0
+    2300028: Archmodels55_35_hull1_MeshPart1
+    2300030: Archmodels55_35_hull1_MeshPart2
+    2300032: Archmodels55_35_hull1_MeshPart3
+    2300034: Archmodels55_35_hull1_MeshPart4
+    2300036: Archmodels55_35_hull1_MeshPart5
+    2300038: Archmodels55_35_hull1_MeshPart6
+    2300040: Archmodels55_35_hull1_MeshPart7
+    2300042: Archmodels55_35_hull1_MeshPart8
+    2300044: Archmodels55_35_hull1_MeshPart9
+    2300046: Archmodels55_35_hull2
+    2300048: Archmodels55_35_landing_green
+    2300050: Archmodels55_35_landing_logo
+    2300052: Archmodels55_35_loungers_MeshPart0
+    2300054: Archmodels55_35_loungers_MeshPart1
+    2300056: Archmodels55_35_loungers_MeshPart10
+    2300058: Archmodels55_35_loungers_MeshPart11
+    2300060: Archmodels55_35_loungers_MeshPart12
+    2300062: Archmodels55_35_loungers_MeshPart13
+    2300064: Archmodels55_35_loungers_MeshPart14
+    2300066: Archmodels55_35_loungers_MeshPart2
+    2300068: Archmodels55_35_loungers_MeshPart3
+    2300070: Archmodels55_35_loungers_MeshPart4
+    2300072: Archmodels55_35_loungers_MeshPart5
+    2300074: Archmodels55_35_loungers_MeshPart6
+    2300076: Archmodels55_35_loungers_MeshPart7
+    2300078: Archmodels55_35_loungers_MeshPart8
+    2300080: Archmodels55_35_loungers_MeshPart9
+    2300082: Archmodels55_35_minigolf
+    2300084: Archmodels55_35_pipes
+    2300086: Archmodels55_35_pool_bar
+    2300088: Archmodels55_35_pool_water
+    2300090: Archmodels55_35_rb1_MeshPart0
+    2300092: Archmodels55_35_rb1_MeshPart1
+    2300094: Archmodels55_35_rb1_MeshPart2
+    2300096: Archmodels55_35_rb2
+    2300098: Archmodels55_35_rb5
+    2300100: Archmodels55_35_rb_lifts_MeshPart0
+    2300102: Archmodels55_35_rb_lifts_MeshPart1
+    2300104: Archmodels55_35_rb_lifts_MeshPart2
+    2300106: Archmodels55_35_rb_lines_MeshPart0
+    2300108: Archmodels55_35_rb_lines_MeshPart1
+    2300110: Archmodels55_35_rb_lines_MeshPart2
+    2300112: Archmodels55_35_tables
+    2300114: Archmodels55_35_windows
+    2300116: Archmodels55_35_hull1_MeshPart10
+    2300118: Archmodels55_35_hull1_MeshPart11
+    2300120: Archmodels55_35_rb1
+    2300122: balustrade1
+    2300124: basketball_board
+    2300126: basketball_court
+    2300128: blue
+    2300130: blue2
+    2300132: board1
+    2300134: board2
+    2300136: board3
+    2300138: chairs
+    2300140: dkw
+    2300142: DoorJamRoom
+    2300144: FloorPieceNoHole
+    2300146: FloorPieceWithHole
+    2300148: FloorPrefab
+    2300150: glass
+    2300152: hull1 West_MeshPart0
+    2300154: hull1 West_MeshPart1
+    2300156: hull1 West_MeshPart2
+    2300158: hull1_MeshPart0
+    2300160: hull1_MeshPart1
+    2300162: hull1_MeshPart2
+    2300164: hull1_MeshPart3
+    2300166: hull2
+    2300168: landing_green
+    2300170: landing_logo
+    2300172: loungers_MeshPart0
+    2300174: loungers_MeshPart1
+    2300176: loungers_MeshPart2
+    2300178: loungers_MeshPart3
+    2300180: loungers_MeshPart4
+    2300182: minigolf
+    2300184: pipes
+    2300186: pool_bar
+    2300188: pool_water
+    2300190: tables
+    2300192: windows
+    2300194: windowsRoom
+    2300196: hull1 EastFloor0
+    2300198: hull1 EastFloor1
+    2300200: hull1 EastFloor2Middle
+    2300202: hull1 EastFloor3
+    2300204: hull1 EastFloor4Top_MeshPart0
+    2300206: hull1 EastFloor4Top_MeshPart1
+    2300208: hull1 EastWalls
+    2300210: hull1 WestFloor0
+    2300212: hull1 WestFloor1
+    2300214: hull1 WestFloor2Midle
+    2300216: hull1 WestFloor3
+    2300218: hull1 WestFloor4Top_MeshPart0
+    2300220: hull1 WestFloor4Top_MeshPart1
+    2300222: hull1 WestWalls
+    2300224: DoorJamRoom.001
+    2300226: windowsRoom.001
+    3300000: Archmodels55_35_balustrade1
+    3300002: Archmodels55_35_basketball_board
+    3300004: Archmodels55_35_basketball_court
+    3300006: Archmodels55_35_blue
+    3300008: Archmodels55_35_blue2
+    3300010: Archmodels55_35_board1
+    3300012: Archmodels55_35_board2
+    3300014: Archmodels55_35_board3
+    3300016: Archmodels55_35_chairs
+    3300018: Archmodels55_35_climbing_wall
+    3300020: Archmodels55_35_dkw
+    3300022: Archmodels55_35_engines
+    3300024: Archmodels55_35_glass
+    3300026: Archmodels55_35_hull1_MeshPart0
+    3300028: Archmodels55_35_hull1_MeshPart1
+    3300030: Archmodels55_35_hull1_MeshPart2
+    3300032: Archmodels55_35_hull1_MeshPart3
+    3300034: Archmodels55_35_hull1_MeshPart4
+    3300036: Archmodels55_35_hull1_MeshPart5
+    3300038: Archmodels55_35_hull1_MeshPart6
+    3300040: Archmodels55_35_hull1_MeshPart7
+    3300042: Archmodels55_35_hull1_MeshPart8
+    3300044: Archmodels55_35_hull1_MeshPart9
+    3300046: Archmodels55_35_hull2
+    3300048: Archmodels55_35_landing_green
+    3300050: Archmodels55_35_landing_logo
+    3300052: Archmodels55_35_loungers_MeshPart0
+    3300054: Archmodels55_35_loungers_MeshPart1
+    3300056: Archmodels55_35_loungers_MeshPart10
+    3300058: Archmodels55_35_loungers_MeshPart11
+    3300060: Archmodels55_35_loungers_MeshPart12
+    3300062: Archmodels55_35_loungers_MeshPart13
+    3300064: Archmodels55_35_loungers_MeshPart14
+    3300066: Archmodels55_35_loungers_MeshPart2
+    3300068: Archmodels55_35_loungers_MeshPart3
+    3300070: Archmodels55_35_loungers_MeshPart4
+    3300072: Archmodels55_35_loungers_MeshPart5
+    3300074: Archmodels55_35_loungers_MeshPart6
+    3300076: Archmodels55_35_loungers_MeshPart7
+    3300078: Archmodels55_35_loungers_MeshPart8
+    3300080: Archmodels55_35_loungers_MeshPart9
+    3300082: Archmodels55_35_minigolf
+    3300084: Archmodels55_35_pipes
+    3300086: Archmodels55_35_pool_bar
+    3300088: Archmodels55_35_pool_water
+    3300090: Archmodels55_35_rb1_MeshPart0
+    3300092: Archmodels55_35_rb1_MeshPart1
+    3300094: Archmodels55_35_rb1_MeshPart2
+    3300096: Archmodels55_35_rb2
+    3300098: Archmodels55_35_rb5
+    3300100: Archmodels55_35_rb_lifts_MeshPart0
+    3300102: Archmodels55_35_rb_lifts_MeshPart1
+    3300104: Archmodels55_35_rb_lifts_MeshPart2
+    3300106: Archmodels55_35_rb_lines_MeshPart0
+    3300108: Archmodels55_35_rb_lines_MeshPart1
+    3300110: Archmodels55_35_rb_lines_MeshPart2
+    3300112: Archmodels55_35_tables
+    3300114: Archmodels55_35_windows
+    3300116: Archmodels55_35_hull1_MeshPart10
+    3300118: Archmodels55_35_hull1_MeshPart11
+    3300120: Archmodels55_35_rb1
+    3300122: balustrade1
+    3300124: basketball_board
+    3300126: basketball_court
+    3300128: blue
+    3300130: blue2
+    3300132: board1
+    3300134: board2
+    3300136: board3
+    3300138: chairs
+    3300140: dkw
+    3300142: DoorJamRoom
+    3300144: FloorPieceNoHole
+    3300146: FloorPieceWithHole
+    3300148: FloorPrefab
+    3300150: glass
+    3300152: hull1 West_MeshPart0
+    3300154: hull1 West_MeshPart1
+    3300156: hull1 West_MeshPart2
+    3300158: hull1_MeshPart0
+    3300160: hull1_MeshPart1
+    3300162: hull1_MeshPart2
+    3300164: hull1_MeshPart3
+    3300166: hull2
+    3300168: landing_green
+    3300170: landing_logo
+    3300172: loungers_MeshPart0
+    3300174: loungers_MeshPart1
+    3300176: loungers_MeshPart2
+    3300178: loungers_MeshPart3
+    3300180: loungers_MeshPart4
+    3300182: minigolf
+    3300184: pipes
+    3300186: pool_bar
+    3300188: pool_water
+    3300190: tables
+    3300192: windows
+    3300194: windowsRoom
+    3300196: hull1 EastFloor0
+    3300198: hull1 EastFloor1
+    3300200: hull1 EastFloor2Middle
+    3300202: hull1 EastFloor3
+    3300204: hull1 EastFloor4Top_MeshPart0
+    3300206: hull1 EastFloor4Top_MeshPart1
+    3300208: hull1 EastWalls
+    3300210: hull1 WestFloor0
+    3300212: hull1 WestFloor1
+    3300214: hull1 WestFloor2Midle
+    3300216: hull1 WestFloor3
+    3300218: hull1 WestFloor4Top_MeshPart0
+    3300220: hull1 WestFloor4Top_MeshPart1
+    3300222: hull1 WestWalls
+    3300224: DoorJamRoom.001
+    3300226: windowsRoom.001
+    4300000: Archmodels55_35_hull1_MeshPart0
+    4300002: Archmodels55_35_hull1_MeshPart1
+    4300004: Archmodels55_35_hull1_MeshPart2
+    4300006: Archmodels55_35_hull1_MeshPart3
+    4300008: Archmodels55_35_hull1_MeshPart4
+    4300010: Archmodels55_35_hull1_MeshPart5
+    4300012: Archmodels55_35_hull1_MeshPart6
+    4300014: Archmodels55_35_hull1_MeshPart7
+    4300016: Archmodels55_35_hull1_MeshPart8
+    4300018: Archmodels55_35_hull1_MeshPart9
+    4300020: Archmodels55_35_windows
+    4300022: Archmodels55_35_landing_green
+    4300024: Archmodels55_35_landing_logo
+    4300026: Archmodels55_35_board1
+    4300028: Archmodels55_35_balustrade1
+    4300030: Archmodels55_35_glass
+    4300032: Archmodels55_35_blue
+    4300034: Archmodels55_35_board2
+    4300036: Archmodels55_35_loungers_MeshPart0
+    4300038: Archmodels55_35_loungers_MeshPart1
+    4300040: Archmodels55_35_loungers_MeshPart2
+    4300042: Archmodels55_35_loungers_MeshPart3
+    4300044: Archmodels55_35_loungers_MeshPart4
+    4300046: Archmodels55_35_loungers_MeshPart5
+    4300048: Archmodels55_35_loungers_MeshPart6
+    4300050: Archmodels55_35_loungers_MeshPart7
+    4300052: Archmodels55_35_loungers_MeshPart8
+    4300054: Archmodels55_35_loungers_MeshPart9
+    4300056: Archmodels55_35_loungers_MeshPart10
+    4300058: Archmodels55_35_loungers_MeshPart11
+    4300060: Archmodels55_35_loungers_MeshPart12
+    4300062: Archmodels55_35_loungers_MeshPart13
+    4300064: Archmodels55_35_loungers_MeshPart14
+    4300066: Archmodels55_35_dkw
+    4300068: Archmodels55_35_pool_bar
+    4300070: Archmodels55_35_pool_water
+    4300072: Archmodels55_35_tables
+    4300074: Archmodels55_35_pipes
+    4300076: Archmodels55_35_chairs
+    4300078: Archmodels55_35_basketball_court
+    4300080: Archmodels55_35_blue2
+    4300082: Archmodels55_35_climbing_wall
+    4300084: Archmodels55_35_basketball_board
+    4300086: Archmodels55_35_board3
+    4300088: Archmodels55_35_minigolf
+    4300090: Archmodels55_35_hull2
+    4300092: Archmodels55_35_engines
+    4300094: Archmodels55_35_rb1_MeshPart0
+    4300096: Archmodels55_35_rb1_MeshPart1
+    4300098: Archmodels55_35_rb1_MeshPart2
+    4300100: Archmodels55_35_rb5
+    4300102: Archmodels55_35_rb2
+    4300104: Archmodels55_35_rb_lifts_MeshPart0
+    4300106: Archmodels55_35_rb_lifts_MeshPart1
+    4300108: Archmodels55_35_rb_lifts_MeshPart2
+    4300110: Archmodels55_35_rb_lines_MeshPart0
+    4300112: Archmodels55_35_rb_lines_MeshPart1
+    4300114: Archmodels55_35_rb_lines_MeshPart2
+    4300116: Archmodels55_35_rb1
+    4300118: Archmodels55_35_hull1_MeshPart10
+    4300120: Archmodels55_35_hull1_MeshPart11
+    4300122: FloorPieceWithHole
+    4300124: FloorPieceNoHole
+    4300126: DoorJamRoom
+    4300128: windowsRoom
+    4300130: hull1_MeshPart0
+    4300132: hull1_MeshPart1
+    4300134: hull1_MeshPart2
+    4300136: hull1_MeshPart3
+    4300138: windows
+    4300140: landing_green
+    4300142: landing_logo
+    4300144: board1
+    4300146: balustrade1
+    4300148: glass
+    4300150: blue
+    4300152: board2
+    4300154: loungers_MeshPart0
+    4300156: loungers_MeshPart1
+    4300158: loungers_MeshPart2
+    4300160: loungers_MeshPart3
+    4300162: loungers_MeshPart4
+    4300164: dkw
+    4300166: pool_bar
+    4300168: pool_water
+    4300170: tables
+    4300172: pipes
+    4300174: chairs
+    4300176: basketball_court
+    4300178: blue2
+    4300180: basketball_board
+    4300182: board3
+    4300184: minigolf
+    4300186: hull2
+    4300188: hull1 West_MeshPart0
+    4300190: hull1 West_MeshPart1
+    4300192: hull1 West_MeshPart2
+    4300194: FloorPrefab
+    4300196: hull1 EastFloor3
+    4300198: hull1 EastFloor2Middle
+    4300200: hull1 EastWalls
+    4300202: hull1 EastFloor1
+    4300204: hull1 EastFloor0
+    4300206: hull1 WestFloor3
+    4300208: hull1 WestFloor2Midle
+    4300210: hull1 WestWalls
+    4300212: hull1 WestFloor1
+    4300214: hull1 WestFloor0
+    4300216: hull1 EastFloor4Top_MeshPart0
+    4300218: hull1 EastFloor4Top_MeshPart1
+    4300220: hull1 WestFloor4Top_MeshPart0
+    4300222: hull1 WestFloor4Top_MeshPart1
+    4300224: DoorJamRoom.001
+    4300226: windowsRoom.001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 180
+    normalImportMode: 0
+    tangentImportMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
