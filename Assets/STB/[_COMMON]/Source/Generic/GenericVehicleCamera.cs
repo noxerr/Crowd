@@ -32,6 +32,7 @@ namespace STB.Generic
         }
 
         // public
+        public bool allowCameraAdapter = true;
         public CameraType cameraType = CameraType.normal;
 
         // the height we want the camera to be above the target

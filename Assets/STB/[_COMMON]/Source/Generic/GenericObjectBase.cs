@@ -14,6 +14,7 @@ namespace STB.Generic
         // public
         public string hudName = "GENERIC OBJECT";
         public float manualWorkingDistance = 40;
+        public Vector2 heightWorkingRange = new Vector2(-99999, 99999);
 
         // public
 #if UNITY_EDITOR
@@ -104,7 +105,7 @@ namespace STB.Generic
             if (STB.Basics.WeAreTheMainCamera.RealCamera) actualCamera = STB.Basics.WeAreTheMainCamera.RealCamera;
             if (!actualCamera) return;
 
-            bool haveToBeEnabled = CanBeEnabled() && (Vector3.Distance(actualCamera.transform.position, this.transform.position) < GetWorkingDistance());
+            bool haveToBeEnabled = CanBeEnabled() && (Vector3.Distance(actualCamera.transform.position, this.transform.position) < GetWorkingDistance()) && (this.transform.position.y > heightWorkingRange.x) && (this.transform.position.y < heightWorkingRange.y);
 
             switch (workingState)
             {

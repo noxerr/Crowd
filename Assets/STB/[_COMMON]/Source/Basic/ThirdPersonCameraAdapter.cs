@@ -20,6 +20,9 @@ namespace STB.Basics
         Vector3 basePosition;
         float somethingBehindCounter = 0;
 
+        // private
+        Generic.GenericVehicleCamera actualCamera = null;
+
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>
@@ -29,6 +32,8 @@ namespace STB.Basics
         void Awake()
         {
             if (cameraTransform) basePosition = cameraTransform.localPosition;
+
+            actualCamera = GameObject.FindObjectOfType<Generic.GenericVehicleCamera>();
         }
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>
@@ -37,6 +42,8 @@ namespace STB.Basics
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         void OnTriggerStay(Collider col)
         {
+            if (actualCamera && !actualCamera.allowCameraAdapter) return;
+
             //Debug.Log("col A: " + col.name);
 
             if (!cameraTransform) return;
@@ -53,7 +60,7 @@ namespace STB.Basics
                 if (col.GetComponent<Generic.GenericTrafficLightBase>()) return;
                 if (col.GetComponent<STB.Generic.GenericPathPoint>()) return;
                 if (col.GetComponent<STB.Generic.GenericNonStopZone>()) return;
-                if (col.GetComponent<STB.Generic.GenericVehicleController>()) return;
+                if (Basics.BasicFunctions.GetParentGenericVehicleController(col.transform)) return;
             }
             else
             {

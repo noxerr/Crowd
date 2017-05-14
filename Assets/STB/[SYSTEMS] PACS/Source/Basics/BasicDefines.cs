@@ -15,7 +15,7 @@ namespace STB.PACS
     public class BasicDefines
     {
         // public -- version
-        public static string VERSION = "1.2.2.4"; // 2017/05/07
+        public static string VERSION = "1.2.2.4"; // 2017/05/16
 
 
         // public -- paths

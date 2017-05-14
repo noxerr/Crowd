@@ -15,7 +15,7 @@ namespace STB.Basics
     public class BasicDefines
     {
         // public -- version
-        public static string VERSION = "2.2.2.3"; // 2017/05/07
+        public static string VERSION = "2.2.3.2"; // 2017/05/16
 
 
         // public -- other

@@ -15,10 +15,12 @@ namespace STB.PACS
     {
         // public static
         public static IndividualHandler Singleton = null;
+        public static List<GenericIndividual> GenericIndividualList = new List<GenericIndividual>();
 
         // public
         public bool drawPathsInRealTime = true;
         public float workingDistance = 40;
+        public Vector2 heightWorkingRange = new Vector2(-99999, 99999);
         public int maxPool = 9;
         public int maxDensity = 99;
         public bool noNavMeshHandle = false;
@@ -98,6 +100,16 @@ namespace STB.PACS
 
             // extended awake
             AwakeExtended();
+        }
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// OnDestroy
+        /// </summary>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        void OnDestroy()
+        {
+            Singleton = null;
+            GenericIndividualList.Clear();
         }
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>
@@ -294,6 +306,8 @@ namespace STB.PACS
                 {
                     if (genericObjectList[i]) genericObjectList[i].HandleWorkingState();
                     else genericObjectList.RemoveAt(i);
+
+                    genericObjectList[i].heightWorkingRange = heightWorkingRange;
                 }
 
                 actualGenericObjectCounter++;

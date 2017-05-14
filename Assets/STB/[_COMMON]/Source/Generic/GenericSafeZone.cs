@@ -14,6 +14,8 @@ namespace STB.Generic
     {
         // public
         public float probability = 100;
+        public float idleTimeOnceAchieved = 9999;
+        public GenericSafeZone linkedSafeZone = null;
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>

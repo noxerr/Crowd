@@ -101,6 +101,9 @@ namespace STB.PACS
         // private
         STB.Generic.GenericRendererBase genericRendererBase = null;
 
+        // private
+        STB.Generic.GenericSafeZone lastSafeZoneAchieved = null;
+
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>
@@ -109,6 +112,8 @@ namespace STB.PACS
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         void Awake()
         {
+            IndividualHandler.GenericIndividualList.Add(this);
+
             totalStatesProbability = idleProbability + walkingrobability + runningProbability;
 
             totalBehaviorProbability = braveProbability + fearfulgrobability + neutralProbability;
@@ -233,7 +238,11 @@ namespace STB.PACS
 
             //if (col.GetComponent<NonStopZone>()) Debug.Log("we are on NonStopZone");
 
-            if (col.GetComponent<GenericTrafficLight>())
+            if (col.GetComponent<Generic.GenericSafeZone>())
+            {
+                lastSafeZoneAchieved = col.GetComponent<Generic.GenericSafeZone>();
+            }
+            else if (col.GetComponent<GenericTrafficLight>())
             {
                 if (col.GetComponent<GenericTrafficLight>().GetRed() && GetOnNormalMovement()) GoToIdle(false, 0);
                 else if (!col.GetComponent<GenericTrafficLight>().GetRed() && !GetOnNormalMovement()) GoToWalk(false, 0);
@@ -807,15 +816,20 @@ namespace STB.PACS
                             scarePointBase = lastSafeZone.position;
                         }
 
-                        float distanceToSafeZone = Vector3.Distance(this.transform.position, lastSafeZone.position);
+                        SetIndividualDestination(scarePointBase);
 
-                        if (distanceToSafeZone > 4)
+                        if (!lastSafeZone || (lastSafeZone && lastSafeZoneAchieved && lastSafeZone.gameObject.Equals(lastSafeZoneAchieved.gameObject)))
                         {
-                            SetIndividualDestination(scarePointBase);
-                        }
-                        else
-                        {
-                            GoToIdle(true, 0);
+                            if (lastSafeZoneAchieved.linkedSafeZone)
+                            {
+                                lastSafeZone = lastSafeZoneAchieved.linkedSafeZone.transform;
+                            }
+                            else
+                            {
+                                GoToIdle(true, lastSafeZoneAchieved.idleTimeOnceAchieved);
+                            }
+
+                            lastSafeZoneAchieved = null;
                         }
                     }
                     break;

@@ -2,43 +2,38 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace STB.Generic
+namespace STB.PACS
 {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /// <summary>
-    /// Class: GenericScaryZone
-    /// # 
+    /// Class: ScaryZone
+    /// # If a individual touch this will start running until the scared time turns zero
     /// </summary>
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    public class GenericScaryZone : MonoBehaviour
+    public class GlobalScarer : MonoBehaviour
     {
         // public
-        public bool hideRendererIfExists = false;
+        public KeyCode keycodeToScareAll = KeyCode.Alpha9;
         public float scaredTime = 9;
         public Transform safeZone = null;
 
         // private
-        List<GenericSafeZone> safeZonesList = new List<GenericSafeZone>();
+        List<Generic.GenericSafeZone> safeZonesList = new List<Generic.GenericSafeZone>();
         float safeZoneTotalProbability = 0;
 
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>
-        /// Awake
+        /// AwakeExtended
         /// </summary>
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        protected virtual void Awake()
+        void Awake()
         {
-            if (hideRendererIfExists)
-            {
-                if (GetComponent<Renderer>()) GetComponent<Renderer>().enabled = false;
-            }
-
             if (safeZone)
             {
                 for (int i = 0; i < safeZone.childCount; i++)
                 {
-                    GenericSafeZone actualGenericSafeZone = safeZone.GetChild(i).GetComponent<GenericSafeZone>();
+                    Generic.GenericSafeZone actualGenericSafeZone = safeZone.GetChild(i).GetComponent<Generic.GenericSafeZone>();
 
                     if (actualGenericSafeZone)
                     {
@@ -53,16 +48,6 @@ namespace STB.Generic
 
                 //Debug.Log("safeZoneTotalProbability: " + safeZoneTotalProbability);
             }
-
-            AwakeExtended();
-        }
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>
-        /// AwakeExtended
-        /// </summary>
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        protected virtual void AwakeExtended()
-        {
         }
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>
@@ -86,6 +71,38 @@ namespace STB.Generic
             }
 
             return safeZone;
+        }
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// AwakeExtended
+        /// </summary>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        void Update()
+        {
+            if (!IndividualHandler.Singleton) return;
+
+            if (Input.GetKeyDown(keycodeToScareAll))
+            {
+                Debug.Log("Scare all: " + IndividualHandler.GenericIndividualList.Count);
+
+                for (int i = 0; i < IndividualHandler.GenericIndividualList.Count; i++)
+                {
+                    IndividualHandler.GenericIndividualList[i].GoToSafeZone(GetSafeZone(), scaredTime);
+                }
+            }
+
+            for (int j = 0; j < safeZonesList.Count; j++)
+            {
+                if (Input.GetKeyDown(KeyCode.Alpha0 + j))
+                {
+                    Debug.Log("Scare all: " + IndividualHandler.GenericIndividualList.Count);
+
+                    for (int i = 0; i < IndividualHandler.GenericIndividualList.Count; i++)
+                    {
+                        IndividualHandler.GenericIndividualList[i].GoToSafeZone(safeZonesList[j].transform, scaredTime);
+                    }
+                }
+            }
         }
     }
 }
