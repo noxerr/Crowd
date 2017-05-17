@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AddJoint : MonoBehaviour {
+public class AddFloorReference : MonoBehaviour {
+
     private GameLogic gl;
     public int floor;
     private bool alreadySet = false;
@@ -19,11 +20,10 @@ public class AddJoint : MonoBehaviour {
     {
         if (gl.floorContent.Length > 0 && !alreadySet)
         {
-            gl.AddJoint(gameObject, floor);
-            alreadySet = true; 
+            gl.SetFloorParent(gameObject, floor);
+            alreadySet = true;
             Destroy(this);
         }
     }
 
-	
 }
