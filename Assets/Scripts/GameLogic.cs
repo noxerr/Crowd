@@ -3,22 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameLogic : MonoBehaviour {
+    public static int numFloors = 8;
 
     [System.Serializable]
-    public class pairGOFloor
+    public class FloorContent
     {
-        public GameObject go;
-        public int floor;
-        public pairGOFloor(GameObject go, int floor)
+        public List<GameObject> joints = new List<GameObject>();
+        public GameObject FloorMindPoints, floorParent;
+        public void AddJoint(GameObject go)
         {
-            this.go = go;
-            this.floor = floor;
+            joints.Add(go);
+        }
+        public void SetFloorMindPoints(GameObject parentPoints)
+        {
+            FloorMindPoints = parentPoints;
+        }
+
+        public void SetFloorParent(GameObject floorparent)
+        {
+            this.floorParent = floorparent;
         }
     }
+    
 
     public GameObject startPoint, finishPoint;
     public GameObject mainAvatar;
-    public List<pairGOFloor> doorJoints = new List<pairGOFloor>();
+    public FloorContent[] floorContent;
     public bool alarm = false;
     [Tooltip("1 means no danger, 5 means ship is sunken")]
     public int levelOfDanger = 1;
@@ -27,26 +37,42 @@ public class GameLogic : MonoBehaviour {
     public int playerFloor = 4;
 
     private MindMap userMap;
-    private int stairsLayer;
+    private int stairsLayer, mind;
     private float lastYStairs;
+    private List<GameObject> userSteps;
+
 
     // Use this for initialization
     void Start () {
+        floorContent = new FloorContent[numFloors];
+        for (int i = 0; i < numFloors; i++) floorContent[i] = new FloorContent();
         mainAvatar.transform.SetPositionAndRotation(startPoint.transform.position, startPoint.transform.rotation);
         stairsLayer = LayerMask.NameToLayer("stairs");
+        stairsLayer = LayerMask.NameToLayer("Mind");
         lastYStairs = startPoint.transform.position.y;
         Invoke("SetAlarm", 3f );
         mainAvatar.GetComponent<PlayerLogic>().OnCollEnter += OnPlayerCollided;
-
+        userSteps = new List<GameObject>();
     }
 
-    public void AddJoint(GameObject joint, int floor)
+    public void AddJoint(GameObject joint, int floor) 
     {
-        doorJoints.Add(new pairGOFloor(joint, floor));
+
+        floorContent[floor].AddJoint(joint);
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    public void SetFloorMindPoints(GameObject mindsParent, int floor)
+    {
+        floorContent[floor].SetFloorMindPoints(mindsParent);
+    }
+
+    public void SetFloorParent(GameObject floorParent, int floor)
+    {
+        floorContent[floor].SetFloorParent(floorParent);
+    }
+
+    // Update is called once per frame
+    void Update () {
 		if (!alarm)
         {
 
@@ -72,6 +98,10 @@ public class GameLogic : MonoBehaviour {
             if (lastYStairs + 1 < collidedGO.transform.position.y) { playerFloor += 1; ChangeFloor(); }
             else if (lastYStairs - 1 > collidedGO.transform.position.y) { playerFloor -= 1; ChangeFloor(); }
             lastYStairs = collidedGO.transform.position.y;
+        }
+        else if (collidedGO.layer == mind)
+        {
+            userSteps.Add(collidedGO);
         }
     }
 
