@@ -69,6 +69,8 @@ public class GameLogic : MonoBehaviour {
     public void SetFloorParent(GameObject floorParent, int floor)
     {
         floorContent[floor].SetFloorParent(floorParent);
+        if (floor < playerFloor - 1 || floor > playerFloor + 1) floorParent.SetActive(false);
+        else floorParent.SetActive(true);
     }
 
     // Update is called once per frame
@@ -92,12 +94,9 @@ public class GameLogic : MonoBehaviour {
 
     private void OnPlayerCollided(Collider collider)
     {
-        Debug.Log("tu puta madre entra");
         GameObject collidedGO = collider.gameObject;
         if (collidedGO.layer == stairsLayer)
         {
-            Debug.Log("tu puta madre layer");
-            Debug.Log("eres subnormal? val y: " + lastYStairs + " - cuyrrent: " + collidedGO.transform.position.y);
             if (lastYStairs + 1 < collidedGO.transform.position.y) { playerFloor += 1; ChangeFloor(); }
             else if (lastYStairs - 1 > collidedGO.transform.position.y) { playerFloor -= 1; ChangeFloor(); }
             lastYStairs = collidedGO.transform.position.y;
@@ -111,6 +110,10 @@ public class GameLogic : MonoBehaviour {
     private void ChangeFloor()
     {
         Debug.Log("Floor number: " + playerFloor);
+        if (floorContent[playerFloor - 1].floorParent != null) floorContent[playerFloor - 1].floorParent.SetActive(true);
+        if (floorContent[playerFloor - 2].floorParent != null) floorContent[playerFloor - 2].floorParent.SetActive(false);
+        if (floorContent[playerFloor + 1].floorParent != null) floorContent[playerFloor + 1].floorParent.SetActive(true);
+        if (floorContent[playerFloor + 2].floorParent != null) floorContent[playerFloor + 2].floorParent.SetActive(false);
     }
 
 }
