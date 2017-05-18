@@ -48,7 +48,7 @@ public class GameLogic : MonoBehaviour {
         for (int i = 0; i < numFloors; i++) floorContent[i] = new FloorContent();
         mainAvatar.transform.SetPositionAndRotation(startPoint.transform.position, startPoint.transform.rotation);
         stairsLayer = LayerMask.NameToLayer("stairs");
-        stairsLayer = LayerMask.NameToLayer("Mind");
+        mind = LayerMask.NameToLayer("Mind");
         lastYStairs = startPoint.transform.position.y;
         Invoke("SetAlarm", 3f );
         mainAvatar.GetComponent<PlayerLogic>().OnCollEnter += OnPlayerCollided;
@@ -92,9 +92,12 @@ public class GameLogic : MonoBehaviour {
 
     private void OnPlayerCollided(Collider collider)
     {
+        Debug.Log("tu puta madre entra");
         GameObject collidedGO = collider.gameObject;
         if (collidedGO.layer == stairsLayer)
         {
+            Debug.Log("tu puta madre layer");
+            Debug.Log("eres subnormal? val y: " + lastYStairs + " - cuyrrent: " + collidedGO.transform.position.y);
             if (lastYStairs + 1 < collidedGO.transform.position.y) { playerFloor += 1; ChangeFloor(); }
             else if (lastYStairs - 1 > collidedGO.transform.position.y) { playerFloor -= 1; ChangeFloor(); }
             lastYStairs = collidedGO.transform.position.y;
