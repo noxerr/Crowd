@@ -89,6 +89,12 @@ public class GameLogic : MonoBehaviour {
     private void SetAlarm()
     {
         alarm = true;
+        List<GameObject> joints = floorContent[playerFloor].joints;
+        foreach (GameObject go in joints)
+        {
+            //go.transform.GetChild(0).RotateAround(transform.position, Vector3.up, 90);
+            go.transform.GetChild(0).Rotate(0, 90, 0);
+        }
     }
 
 
@@ -114,6 +120,11 @@ public class GameLogic : MonoBehaviour {
         if (floorContent[playerFloor - 2].floorParent != null) floorContent[playerFloor - 2].floorParent.SetActive(false);
         if (floorContent[playerFloor + 1].floorParent != null) floorContent[playerFloor + 1].floorParent.SetActive(true);
         if (floorContent[playerFloor + 2].floorParent != null) floorContent[playerFloor + 2].floorParent.SetActive(false);
+        List<GameObject> joints = floorContent[playerFloor].joints;
+        foreach (GameObject go in joints)
+        {
+            go.transform.GetChild(0).Rotate(0, 90, 0);
+        }
     }
 
 }
