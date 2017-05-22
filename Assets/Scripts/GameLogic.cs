@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameLogic : MonoBehaviour {
     public static int numFloors = 8;
+    public GameObject secondFloorY;
+    public GameObject individualHandler;
 
     [System.Serializable]
     public class FloorContent
@@ -35,10 +37,11 @@ public class GameLogic : MonoBehaviour {
 
     [HideInInspector]
     public int playerFloor = 4;
-
+    private float sndFloorYCoord;
     private MindMap userMap;
     private int stairsLayer, mind;
     private float lastYStairs;
+    private STB.PACS.IndividualHandler IH;
     private List<GameObject> userSteps;
 
 
@@ -53,6 +56,9 @@ public class GameLogic : MonoBehaviour {
         Invoke("SetAlarm", 3f );
         mainAvatar.GetComponent<PlayerLogic>().OnCollEnter += OnPlayerCollided;
         userSteps = new List<GameObject>();
+        IH = individualHandler.GetComponent<STB.PACS.IndividualHandler>();
+        sndFloorYCoord = secondFloorY.transform.position.y;
+        IH.heightWorkingRange = new Vector2(sndFloorYCoord + 6.6f - 0.2f, sndFloorYCoord + 6.6f + 2.5f);
     }
 
     public void AddJoint(GameObject joint, int floor) 
@@ -125,6 +131,7 @@ public class GameLogic : MonoBehaviour {
         {
             go.transform.GetChild(0).Rotate(0, 90, 0);
         }
+        IH.heightWorkingRange = new Vector2(sndFloorYCoord + (playerFloor-2)*3.3f - 0.2f, sndFloorYCoord + (playerFloor - 2) * 3.3f + 2.5f);
     }
 
 }
