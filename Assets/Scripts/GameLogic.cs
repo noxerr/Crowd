@@ -58,7 +58,7 @@ public class GameLogic : MonoBehaviour {
         userSteps = new List<GameObject>();
         IH = individualHandler.GetComponent<STB.PACS.IndividualHandler>();
         sndFloorYCoord = secondFloorY.transform.position.y;
-        IH.heightWorkingRange = new Vector2(sndFloorYCoord + 6.6f - 0.2f, sndFloorYCoord + 6.6f + 2.5f);
+        IH.heightWorkingRange = new Vector2(sndFloorYCoord + 6.6f - 0.2f, sndFloorYCoord + 9.9f + 2.5f);
     }
 
     public void AddJoint(GameObject joint, int floor) 
@@ -131,7 +131,7 @@ public class GameLogic : MonoBehaviour {
         {
             go.transform.GetChild(0).Rotate(0, 90, 0);
         }
-        IH.heightWorkingRange = new Vector2(sndFloorYCoord + (playerFloor-2)*3.3f - 0.2f, sndFloorYCoord + (playerFloor - 2) * 3.3f + 2.5f);
+        IH.heightWorkingRange = new Vector2(sndFloorYCoord + (playerFloor-2)*3.3f - 0.2f, sndFloorYCoord + (playerFloor - 1) * 3.3f + 2.5f);
     }
 
 }
