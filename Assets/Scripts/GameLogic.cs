@@ -6,6 +6,7 @@ public class GameLogic : MonoBehaviour {
     public static int numFloors = 8;
     public GameObject secondFloorY;
     public GameObject individualHandler;
+    public GameObject water2ndFloorDanger;
 
     [System.Serializable]
     public class FloorContent
@@ -101,6 +102,14 @@ public class GameLogic : MonoBehaviour {
             //go.transform.GetChild(0).RotateAround(transform.position, Vector3.up, 90);
             go.transform.GetChild(0).Rotate(0, 90, 0);
         }
+        water2ndFloorDanger.SetActive(true);
+        GetComponentInChildren<AudioSource>().Play();
+        Invoke("LowerAlarm", 3f);
+    }
+
+    private void LowerAlarm()
+    {
+        GetComponentInChildren<AudioSource>().volume -= 0.1f;
     }
 
 
@@ -127,11 +136,14 @@ public class GameLogic : MonoBehaviour {
         if (floorContent[playerFloor + 1].floorParent != null) floorContent[playerFloor + 1].floorParent.SetActive(true);
         if (floorContent[playerFloor + 2].floorParent != null) floorContent[playerFloor + 2].floorParent.SetActive(false);
         List<GameObject> joints = floorContent[playerFloor].joints;
-        foreach (GameObject go in joints)
+        if (alarm)
         {
-            go.transform.GetChild(0).Rotate(0, 90, 0);
+            foreach (GameObject go in joints)
+            {
+                go.transform.GetChild(0).Rotate(0, 90, 0);
+            }
         }
-        IH.heightWorkingRange = new Vector2(sndFloorYCoord + (playerFloor-2)*3.3f - 0.2f, sndFloorYCoord + (playerFloor - 1) * 3.3f + 2.5f);
+        if (!alarm || playerFloor > 3 || !water2ndFloorDanger.activeSelf) IH.heightWorkingRange = new Vector2(sndFloorYCoord + (playerFloor-2)*3.3f - 0.2f, sndFloorYCoord + (playerFloor - 1) * 3.3f + 2.5f);
     }
 
 }
