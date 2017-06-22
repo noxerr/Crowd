@@ -126,6 +126,17 @@ public class GameLogic : MonoBehaviour {
         {
             userSteps.Add(collidedGO);
         }
+        if (collidedGO.tag == "Finish")
+        {
+            float totalDist = 0;
+            Vector3 aux = userSteps[0].transform.position;
+            foreach (GameObject go in userSteps)
+            {
+                totalDist += Vector3.SqrMagnitude(go.transform.position - aux);
+                aux = go.transform.position;
+            }
+            Debug.Log("Total traveled distance: " + totalDist + " Unity units");
+        }
     }
 
     private void ChangeFloor()
